@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Assignment Upload Page</title>
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background: #333;
+    color: #fff;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+nav li {
+    margin: 0;
+}
+
+nav a {
+    display: block;
+    padding: 15px;
+    color: #fff;
+    text-decoration: none;
+}
+
+nav a:hover {
+    background: #555;
+}
+
+main {
+    padding: 20px;
+}
+
+section {
+    margin-bottom: 40px;
+}
+#home {
+    height: 100vh; /* Full viewport height */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #f0f0f0; /* Background color for home section */
+    text-align: center;
+    background-image: url(f.jpg);
+    background-size: 100%;
+    color: #ddd;
+}
+
+.para{
+    margin-top: 100px;
+    margin-right: 150px;
+    align-content: center;
+}
+button {
+    background: #007BFF;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #0056b3;
+}
+.code-output {
+    display: none; /* Hide code and output sections by default */
+    margin-top: 10px;
+}
+
+.show-button {
+    display: inline-block;
+    margin-right: 10px;
+    padding: 5px 10px;
+    text-decoration: none;
+    background-color: #007BFF;
+    color: #fff;
+    border-radius: 3px;
+    border: none;
+    cursor: pointer;
+}
+
+.show-button:hover {
+    background-color: #0056b3;
+}
+
+/* Display sections when the corresponding hash is targeted */
+:target {
+    display: block;
+}
+
+#show-structure1-code:target,
+#show-structure1-output:target {
+    display: block; /* Show the target section */
+}
+
+#show-structure1-code img,
+#show-structure1-output img {
+    max-width: 100%;
+    height: auto;
+}
+pre {
+    background: #f4f4f4;
+    padding: 10px;
+    border: 1px solid #ddd;
+    overflow-x: auto;
+}
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#structure">Structure</a></li>
+                <li><a href="#pointer">Pointer</a></li>
+                <li><a href="#pointer">File Handling</a></li>
+                <!-- Add more topics as needed -->
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home">
+            <h1 class="cap">Welcome to the Assignment Upload Page</h1><br>
+            <p class="para"> Use the navigation bar to explore different topics.</p>
+        </section>
+
+        <section id="about">
+            <h2>About</h2>
+            <p>Information about the C programming topics and assignments.</p>
+        </section>
+
+        <section id="structure">
+            <h2>Structure</h2>
+            <p>Here you'll find questions related to C structures.</p>
+            <button onclick="showCode('structure')">Show Code and Output</button>
+            <pre id="structure-output"></pre>
+        </section>
+        <section id="pointer">
+            <h2>Pointer</h2>
+            <p>Here you'll find questions related to C pointers.</p>
+            <button onclick="showCode('pointer')">Show Code and Output</button>
+            <pre id="pointer-output"></pre>
+        </section>
+        <section id="file handling">
+            <h2>File Handling</h2>
+            <p>Here you'll find questions related to C file handling.</p>
+             
+            <ul>
+                <li>
+                    <p>To create a new data file and store a sentence “I love C
+                        programming.” using fwrite(). Read the file afterwards using fread() upto 8
+                        characters only.</p>
+                    <a href="#show-structure1-code" class="show-button">Show Code</a>
+                    <a href="#show-structure1-output" class="show-button">Show Output</a>
+                    
+                    <!-- Hidden content containers -->
+                    <div id="show-structure1-code" class="code-output">
+                        <h3>Code</h3>
+                        <img src="file1.JPG" alt="Code for Structure 1">
+                    </div>
+                    <div id="show-structure1-output" class="code-output">
+                        <h3>Output</h3>
+                        <img src="file1.JPG" alt="Output for Structure 1">
+                    </div>
+                </li>
+                <li>
+                    <p>To store Name, Address, Age and Salary of 10 employees  in a data file STAFF.TXT. </p>
+                    <a href="#show-structure1-code" class="show-button">Show Code</a>
+                    <a href="#show-structure1-output" class="show-button">Show Output</a>
+                    
+                    <!-- Hidden content containers -->
+                    <div id="show-structure1-code" class="code-output">
+                        <h3>Code</h3>
+                        <img src="file2.JPG" alt="Code for Structure 1">
+                    </div>
+                    <div id="show-structure1-output" class="code-output">
+                        <h3>Output</h3>
+                        <img src="file2.JPG" alt="Output for Structure 1">
+                    </div>
+                </li>
+            </ul>
+        </section>
+        <!-- Add more sections as needed -->
+    </main>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
